@@ -51,10 +51,18 @@
           'Content-Type': 'application/json',
         }
       })
+      let result1 = await fetch('/test', {
+        method: 'get',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/json',
+        }
+      })
       let json = await result.json()
+      let json1 = await result1.json()
       console.log(json)
       let code = document.getElementById('code')
-      code.innerHTML = JSON.stringify(json, null, 2)
+      code.innerHTML = JSON.stringify(json, null, 2)+JSON.stringify(json1, null, 2)
       })()
     </script>
   </body>
