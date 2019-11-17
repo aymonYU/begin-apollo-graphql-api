@@ -5,6 +5,7 @@ flower-w47
 
 @http
 post /graphql
+get /test
 
 @tables
 data
